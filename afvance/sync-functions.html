@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set & Clear setInterval</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #stop {
+            background-color: black;
+            padding: 8px 15px;
+            border-radius: 5px;
+            width: 70px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body style="background-color: #414141; color: wheat;">
+    <div class="container">
+        <h2>Let's Learn setInterval</h2>
+        <div id="stop">Stop</div>
+    </div>
+</body>
+<script>
+
+    // ************** setInterval *****************
+    // _______ continuously runs after given time _______
+    // let sayBabar = function () {
+    //     console.log("Hello Babar Khan");
+    // }
+    // setInterval(sayBabar, 1000)
+
+
+
+    // *************** settimeout ************
+    //________ just run single time after fiven time ________
+    let changetext = function () {
+        let heading = document.querySelector('h2')
+        heading.innerHTML = 'Welcom to babarWites'
+    }
+
+    let changeMe = setTimeout(changetext, 3000)
+
+    document.querySelector('#stop').addEventListener('click', function () {
+        clearTimeout(changeMe)
+        console.log('Stopped');
+    })
+
+
+    // ********** Clear interval **************
+
+    let sayDate = function (str) {
+        console.log(str, Date.now());
+    }
+
+    let intId = setInterval(sayDate, 1000, 'Babar');
+
+    clearInterval(intId)
+
+
+</script>
+
+</html>

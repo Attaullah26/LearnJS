@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Color</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50vh;
+        }
+        .button {
+            padding: 12px;
+            border: 2px solid black;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #green {
+            background-color: green;
+            color: white;
+        }
+        #blue {
+            background-color: blue;
+            color: white;
+        }
+        #black {
+            background-color: black;
+            color: white;
+            border-color: white;
+            transition: all .3s;
+        }
+        #pink {
+            background-color: pink;
+            color: black;
+        }
+        body {
+            background-color: #212121;
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="button" id="green">Green</div>
+        <div class="button" id="blue">Blue</div>
+        <div class="button" id="black">Light</div>
+        <div class="button" id="pink">Yellow</div>
+    </div>
+    <script src="js/script-01.js"></script>
+</body>
+</html>

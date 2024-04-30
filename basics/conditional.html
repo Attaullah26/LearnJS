@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Expressions</title>
+    <style>
+        body {
+            background-color: #313131;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>if else , else if, else </h1>
+</body>
+<script>
+    let a = prompt('What is your age?')
+    a = Number.parseInt(a) // string to number conversion
+    // console.log(a);
+    // console.log(typeof a);
+    if(a <= 0){
+        console.log('Incorrect age');
+    }else if (a <= 18){
+        console.log("Not eligible");
+    }else if (a >= 18 && a <= 25){
+        console.log('Yes you are eligible ');
+    }else if (a >= 25){
+        console.log("you are over age");
+    }else {
+        console.log('Age must between 18 to 25');
+    }
+
+
+  
+</script>
+</html>

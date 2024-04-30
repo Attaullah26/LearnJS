@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element</title>
+    <style>
+        body {
+            background-color: #414141;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+    <script>
+
+        // ************* Create Element ****************** //
+        
+        // const newDiv = document.createElement('div')
+        // console.log(newDiv);
+        // newDiv.className = "main"
+        // newDiv.id = Math.round(Math.random() * 10 + 1)
+        // newDiv.setAttribute('title', 'main title')
+        // newDiv.setAttribute('style', 'background-color: yellow;')
+        // newDiv.style.color = "black"
+        // newDiv.style.padding = '12px'
+        
+        // newDiv.innerHTML = "Hello this is a testing Div"
+        // const addText = document.createTextNode('This is a testing text')
+        // newDiv.appendChild(addText)
+
+        // document.body.appendChild(newDiv)
+
+
+
+        // *************** Create an Element through FUNCTION ************** //
+
+
+        function createElement (name, cName, bgColor, textColor, content, toName, toDoc){
+
+            const elementName = document.createElement(name)
+
+            elementName.className = cName
+
+            elementName.style.backgroundColor = bgColor
+
+            elementName.style.color = textColor
+
+            const addText = elementName.innerHTML = content
+            document.body.appendChild(elementName)
+            console.log(elementName);
+
+        }
+
+        createElement('div', 'test', 'yellow', 'black', 'This is Attaulah Dahar')
+    </script>
+</html>

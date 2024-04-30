@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body>
+    <div class="container">
+        <ul id="images">
+            <li>
+                <a href="">
+                    <img src="images/elon.png" id="elon" alt="" style="width: 200px;" onclick="">
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="images/jackma.jpg" alt="" style="width: 200px;">
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="images/samsung.jpg" alt="" style="width: 200px;">
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="images/iphone.jpg" id="iphone" alt="" style="width: 200px;">
+                </a>
+            </li>
+            <a href="project-03.html" id="go">Google</a>
+        </ul>
+    </div>
+</body>
+<script>
+    // ------------------- irst approch --------------------
+    // To inject events in html
+
+
+    // ---------------------- Second Approch -----------------
+    // document.getElementById('elon').onclick = function (){
+    //     alert('Hello Elon Musk')
+    // }
+
+
+    // ------------ Most Famous & Powerful - addEventListener -------------
+
+    document.getElementById('iphone').addEventListener('click', function () {
+        // alert("iPhone Image Clicked.")
+    })
+
+
+
+
+    // **************************** EVENTS ******************************* //
+    document.querySelector('body').addEventListener('click', function (e) {
+        console.log(e);
+    })
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget
+    // altKey, ctrlKey, shiftKey, keyCode
+
+
+    document.getElementById('images').addEventListener('click', function (e) {
+        console.log('Images List clicked');
+    })
+    // _________if third parameter is "FALSE" its called "PROPAGATION".. or "BUBBLING"_________
+    // works insdide to outside parents elements
+
+    // ________if its "TRUE" its called 'CAPTURING________'
+    // works outside to inside , parents to child elements
+
+    document.getElementById('elon').addEventListener('click', function (e) {
+        console.log('Elon Clicked');
+        // e.stopPropagation() // ________ used to stop Bubbling ________
+    })
+
+
+    // ***************** stopPropagation ********************
+    document.getElementById('go').addEventListener('click', function (e) {
+        console.log('Google clicked');
+        e.preventDefault()
+        e.stopPropagation()
+    })
+
+
+
+    // **************** Remove Image *****************
+
+    // document.querySelector('#images').addEventListener('click', function (e) {
+    //     console.log(e.target.parentNode);
+    //     let removeIt = e.target.parentNode
+    //     // removeIt.remove() // OR
+    //     removeIt.parentNode.removeChild(removeIt)
+    // })
+
+    document.querySelector('#images').addEventListener('click', function (e) {
+        console.log(e.target.tagName);
+        if(e.target.tagName  === 'IMG'){
+            let removeIt = e.target.parentNode
+            console.log(e.target.id);
+            removeIt.remove() // OR
+        }
+    })
+
+
+</script>
+
+</html>

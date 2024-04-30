@@ -1,0 +1,111 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Color</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10vh;
+            flex-direction: column;
+        }
+
+        body {
+            background-color: #212121;
+            color: white;
+        }
+
+        form {
+            background-color: #494949;
+            padding: 50px;
+            border-radius: 12px;
+            min-height: 150px;
+        }
+
+        form .heigh,
+        form .weight {
+            padding: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input {
+            padding: 5px 8px;
+            border-radius: 8px;
+            outline: none;
+            background-color: #494949;
+            color: white;
+            /* font-weight: 700; */
+            font-size: 1.2rem;
+        }
+
+        #result {
+            font-size: 1.3rem;
+            text-align: center;
+            margin-top: 12px;
+            font-weight: 700;
+            text-shadow: 5px 5px 10px black;
+            color: yellow;
+        }
+
+        #btn {
+            margin-left: 70px;
+            margin-top: 18px;
+            background-color: red;
+            color: white;
+            padding: 8px 35px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all .2s;
+        }
+
+        #btn:hover {
+            background-color: rgb(218, 2, 2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">BMI Calculator</h1>
+        <form action="#">
+            <div class="heigh">
+                <input type="text" name="height" id="height" placeholder="Enter Height in CM">
+            </div>
+            <div class="weight">
+                <input type="text" name="weight" id="weight" placeholder="Enter Weight in KG">
+            </div>
+            <button id="btn">Calculate</button>
+            <div id="result"></div>
+        </form>
+    </div>
+</body>
+<script>
+    const form = document.querySelector('form')
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const height = parseInt(document.querySelector('#height').value)
+        const weight = parseInt(document.querySelector('#weight').value)
+        const result = document.querySelector('#result')
+
+        if (height === " " || height < 0 || isNaN(height)) {
+            result.innerHTML = `Please give a valid height ${height}`
+        } else if (weight === " " || weight < 0 || isNaN(weight)) {
+            result.innerHTML = `Please give a valid weight ${weight}`
+        } else {
+            const bmi = (weight / ((height * height) / 10000)).toFixed(2)
+            result.innerHTML = bmi
+            // console.log(bmi);
+        }
+
+    })
+
+</script>
+
+</html>

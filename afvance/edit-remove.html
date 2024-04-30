@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit & Remove</title>
+    <style>
+        body {
+            background-color: #414141;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <ol class="language">
+        <li>Sample Language</li>
+    </ol>
+</body>
+
+
+<!-- ************* Javascript *********** -->
+
+<script>
+    // Add new element by function
+    function addLanguage(langName) {
+        const li = document.createElement('li')
+        li.innerHTML = langName
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addLanguage('Python')
+
+
+    // With optimize Method
+    function addOptLang(langName) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addOptLang('MySQL')
+    addOptLang('Javascript')
+    addOptLang('PHP')
+
+
+
+
+    // ************ EDIT *************** //
+
+    // Method 01
+    // const editLi = document.querySelector('li:nth-child(3)')
+    // console.log(editLi.innerHTML);
+    // editLi.innerHTML = "MongoDB"
+
+    // Method 02
+    const editLi = document.querySelector('li:nth-child(3)')
+    const newLi = document.createElement('li')
+    newLi.textContent = "MongoDB"
+    editLi.replaceWith(newLi)
+
+    // Method 03
+    const firstLi = document.querySelector('li')
+    firstLi.outerHTML = '<li>Cascading Stylesheet</li>'
+
+
+
+    // **************** REMOVE ****************** //
+    const thirdRemove = document.querySelector('li:nth-child(3)')
+    thirdRemove.remove()
+
+    
+</script>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set & Clear setInterval</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #start {
+            background-color: rgb(6, 113, 6);
+            padding: 8px 15px;
+            border-radius: 5px;
+            width: 70px;
+            text-align: center;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        #stop {
+            background-color: rgb(203, 9, 9);
+            padding: 8px 15px;
+            border-radius: 5px;
+            width: 70px;
+            text-align: center;
+            cursor: pointer;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body style="background-color: #414141; color: wheat;">
+    <div class="container">
+        <h2>Start Changing Background Color Every Second</h2>
+        <div id="start">Start</div>
+        <div id="stop">Stop</div>
+    </div>
+</body>
+<script>
+
+    // ************* Generate a Random Color **************//
+    let randomColor = function () {
+        let hex = "0123456789abcdef"
+        let color = '#'
+        for (let i = 0; i < 6; i++) {
+        color += hex[Math.floor(Math.random() * 16)] 
+    }
+    return color           
+        
+    }
+    console.log(randomColor());
+
+    let intervalId
+    let startChangingColor = function(){
+       let changeColor = function(){
+        document.body.style.backgroundColor = randomColor()
+       }
+       if(!intervalId){
+           intervalId = setInterval(changeColor, 1000);
+       }
+    }
+    let stopChangingColor = function(){
+            clearInterval(intervalId)
+            intervalId = null;
+    }
+
+    document.querySelector('#start').addEventListener('click', startChangingColor)
+    document.querySelector('#stop').addEventListener('click', stopChangingColor)
+
+</script>
+
+</html>

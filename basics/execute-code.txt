@@ -1,0 +1,30 @@
+// +++++++++++++++++ EXECUTION CONTEXT / CALL STACK +++++++++++++++++++++
+
+// ****Javascrip Execution Context ************
+{JS Code} ----------> Global Execution
+                        (this)
+
+1. Global Execution Context
+2. Function Execution Context
+
+
+
+{JS Code} ----> 1. Memory Creation Phase
+                2. Execution Phase 
+
+
+
+Memory Creation Phase
+    variable1 ---> undefind
+    variable2 ----> undefind
+    myFunction ---> defination 
+
+Exection Phase 
+    variable1 ---> 10
+    variable ---> 5
+    myFunction ----------------------> another new variable environment + execution thread (it will be delete after use)
+
+                            Memory Creation Phase               Execution Phase
+                                val1 ---> undefind                  num1 ---> 10
+                                val2 ---> undefind                  num2 ---> 5
+                                total ---> undefind                 total ---> 15 (this will again goes to main Global execution)

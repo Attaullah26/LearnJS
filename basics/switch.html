@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Statement</title>
+    <style>
+        body {
+            background-color: #313131;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Switch Statement </h1>
+</body>
+<script>
+
+    // ************** SEITCH *************//
+    const day = prompt('Enter Country Code')
+
+    switch (day) {
+        case 'pk':
+            const country = document.querySelector('h1')
+            country.innerHTML = 'Islamic Republic of Pakistan'
+            break;
+        case 'in':
+            alert('India')
+            break;
+        case 'uk':
+            alert('United Kingdom')
+            break;
+        case 'usa':
+            alert('United States of America')
+            break;
+
+        default:
+            alert('Please enter correct country Code')
+            break;
+    }
+
+
+
+    // ************** TERNARY OPERATOR *****************//
+    let age = prompt('enter age')
+    age = Number.parseInt(age)
+    console.log('You can',(age<18? 'not drive' : 'drive'));
+
+</script>
+
+</html>
