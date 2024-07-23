@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+    <style>
+        body {
+            background-color: #313131;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+
+    <script>
+        // function my_function (){
+        //     console.log('Hello Babar Writes')
+        //     console.log('This is my new function')
+        // }
+        // my_function()
+
+
+        // function sum (one, two){
+        //     console.log(one + two);
+        //     return one * two
+        // }
+
+        // let result = sum(2,5)
+        // console.log(result);
+
+
+        // function greet (name, gender){
+        //     if(gender === "M"){
+        //         console.log("Hello, Mr. " + name + " Welcome to our site.");
+        //     }else {
+        //         return "Hello, Miss. " + name + " Welcome to our site."
+        //     }
+        // }
+
+        // greet('Babar', "M")
+        // let female_greet = greet('Fatima', "F")
+        // console.log(female_greet);
+
+
+        function userLoggedinMessage (username){
+            // if(username === undefined){
+            if(!username){
+                console.log('Please enter your username.');
+                // return
+            }
+            let result = `${username} just loggedIn.`
+            return result
+        }
+        let result = userLoggedinMessage('')
+        console.log(result);
+
+
+        // Function with unlimited parameters ===========================
+
+        let price = function(...num){
+            // console.log(num);
+            return num
+        }
+        let resultNew = price(5,5,75,12,5555)
+        console.log(resultNew);
+
+
+        // function with object ===============================
+
+        let user = {
+            username : 'Babar',
+            age : 28, 
+            loggedIn : true,
+
+            greet : function (){
+                console.log(`Hello, ${uer.username} Welcome to Site`);
+            }
+        }
+
+       
+        function handleObject (anyObject){
+            console.log(`Hello , ${anyObject.username} welcome to Oour Website. Your id is ${anyObject.id}`);
+        }
+        handleObject(user) 
+        // Or we can give object in the argument
+        handleObject({
+            username: 'Babar',
+            id : 123
+        })
+
+        
+
+        // Function with an Array ==========================
+
+
+        let myArray = [12, 44, 77, 786, 110]
+
+        let handleArray = (anyArray)=>{
+            console.log(`Hello, my favourite number combination is ${anyArray[4]}`);
+        };
+
+        handleArray(myArray)
+    </script>
+</body>
+</html>

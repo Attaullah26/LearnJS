@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+    <style>
+        body {
+            background-color: #313131;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Loops in Javascript </h1>
+</body>
+<script>
+
+// *********** FOR LOOP ***********//
+
+// for (let i = 0; i <= 11; i++) {
+//     console.log(i);
+// }
+
+// let sum = 0
+// let n = prompt('Enter a Number ')
+// n = Number.parseInt(n)
+// for (let i = 0; i < n; i++) {
+//     sum += (i + 1)
+//     console.log(i + 1 , );
+// }
+// console.log(`Sum of first ${n} numbers is ${sum}`);
+
+
+
+for (let i = 1; i <= 10; i++) {
+    // console.log(`Outer loop's vallue ${i}`); 
+    for(let j = 1; j <= 10 ; j++){
+        // console.log(`${j}*${i} =  ${j * i}`);
+    }
+}
+
+
+
+// ******************** FOR IN ***********************//
+// used to iterate an object
+
+let obj = {
+    sahil : 50,
+    sameer : 36,
+    kaleem : 76,
+    khalil : 26, 
+    akeel : 45
+}
+
+for (const a in obj) {
+    // console.log(`Marks of ${a} are ${obj[a]}`);
+}
+
+
+
+// *************** WHILE **************** //
+let a = 1
+while(a <= 50){
+    console.log(a);
+    a++
+}
+
+</script>
+
+</html>

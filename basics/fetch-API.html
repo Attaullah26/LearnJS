@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+    <style>
+         body {
+            background-color: #313131;
+            color: white;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fetch</h1>
+    <script>
+        // let promise = fetch('https://jsonplaceholder.typicode.com/posts')
+
+        // promise.then((response)=>{
+        //     console.log(response.status);
+        //     console.log(response.ok);
+        //     let result = response.json()
+        //     return result
+        // }).then((result)=>{
+        //     console.log(result);
+        // })
+
+
+        // GET REQUEST FETCH API ________________
+         
+        // let options = {
+        //     method: 'POST',
+        //     headers: {
+        //         "Content-type": "application/json"
+        //     },
+        //     body : JSON.stringify({
+        //         title: 'Babar',
+        //         body: 'Khan',
+        //         userId : 110
+        //     })
+        // }
+
+        // fetch('https://jsonplaceholder.typicode.com/posts', options)
+        // .then((response) => response.json())
+        // .then((json) => console.log(json))
+
+
+
+        // Same thing with async await function
+
+        const createTodo = async ()=>{
+            let options = {
+            method: 'POST',
+            headers: {
+                "Content-type": "application/json"
+            },
+            body : JSON.stringify({
+                title: 'Babar',
+                body: 'Khan',
+                userId : 110
+            })
+        }
+
+        let p = await fetch('https://jsonplaceholder.typicode.com/posts', options)
+        let response = await p.json()
+        return response
+        }
+
+        const mainF = async ()=>{
+            let todo = await createTodo()
+            console.log(todo);
+        }
+        mainF()
+
+    </script>
+</body>
+</html>

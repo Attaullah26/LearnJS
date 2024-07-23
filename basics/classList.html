@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassList</title>
+    <style>
+        .red {
+            background-color: red;
+            color: white;
+        }
+        .yellow {
+            background-color: yellow;
+            color: black;
+        }
+        body {
+            background-color: #313131;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="first" id="content">This is my document</div>
+    </div>
+    <button class="btn">Click Me</button>
+</body>
+<script>
+    let a = document.querySelector('.first')
+    // let a = document.getElementsByClassName('first')
+    a.classList.add('test')
+    // console.log(a);
+
+
+    // settimeout 
+
+    let sum = (a, b)=>{
+        console.log('Yes, It is running.');
+        a * b
+    }
+
+    // console.log(setTimeout(sum, 3000, 2, 5))
+
+
+
+
+    // **********  event listener *********8
+
+    let x = (e)=>{
+        // alert('hello Workd');
+        // console.log(e.target);
+        // console.log(e.offsetX);
+        // console.log(e.offsetY);
+        // console.log(e);
+        let box = document.querySelector('.first')
+        // box.innerHTML = e.offsetX + '<br>'
+        // box.innerHTML += e.offsetY + '<br>'
+
+    }
+    let y = ()=>{
+        alert('hello Workd 2');
+    }
+
+    let btn = document.querySelector('.btn')
+
+    document.addEventListener('mousemove', x)
+    // btn.addEventListener('click', y)
+
+    // let z = prompt('What is your favourite number?')
+
+    // if(z === '2'){
+    //     btn.removeEventListener('click',y)
+    //     console.log('y has been removed');
+    // }
+
+
+</script>
+</html>

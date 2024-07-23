@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+    <style>
+        body {
+            background-color: #313131;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Promise in Javascript</h1>
+    </div>
+
+    <script>
+
+        // let promiseOne = new Promise((resolve, reject) => {
+        //     console.log('Promise in pending')
+        //     setTimeout(() => {
+        //         // console.log("I am a promise and i am fulfiled.");
+        //         resolve('Hello promise accepted')
+        //     }, 3000);
+        // })
+        // let promiseTwo = new Promise((resolve, reject) => {
+        //     console.log('Promise in pending')
+        //     setTimeout(() => {
+        //         // console.log("I am a promise and i am rejected..");
+        //         reject(new Error('Error occured in promise'))
+        //     }, 3000);
+        // })
+
+        // promiseOne.then((value) => {
+        //     console.log(value);
+        // })
+
+        // promiseTwo.catch((error) => {
+        //     console.log('Some error occured in promiseTwo');
+        // })
+
+        // let promise = new Promise((resolve) => {
+        //     setTimeout(() => {
+        //         resolve('done')
+        //     }, 1000);
+        // })
+
+        // promise.then(alert)
+
+
+
+
+
+            // ************ Callback through promise ***********//
+
+            let loadScript = (src)=>{
+                let promise = new Promise((resolve, reject)=>{
+                    let script = document.createElement('script')
+                    script.src = src
+                    document.body.appendChild(script)
+                    script.onload = (resolve)=>{
+                        resolve('Script loaded successfully.')
+                    }
+                    script.onerror = (reject)=> {
+                        reject()
+                    }
+                })
+            }
+
+    </script>
+</body>
+
+</html>

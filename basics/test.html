@@ -1,0 +1,15 @@
+<script>
+    let url = 'jsonplaceholder.typicode.com/posts';
+
+    let response = fetch(url)
+    response.then((value) => {
+        let a = value.json()
+        console.log(a);
+
+    }).then((value) => {
+        console.log(value);
+    }).catch((error) => {
+        console.log(error);
+    })
+
+</script>

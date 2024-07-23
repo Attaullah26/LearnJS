@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+    <style>
+        body {
+            background-color: #313131;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Catch Error</h1>
+    </div>
+
+    <script>
+
+        // ________ if you want to not stop working execution by error, use TRY & CATCH __________
+        // setTimeout(() => {
+        //     console.log('Hacking a man............... Please wait.....');
+        // }, 1000);
+        // setTimeout(() => {
+        //     console.log('Fetching username and Password............... Please wait.....');
+        // },3000);
+        // try{
+        //     console.log(shahid);
+        // }catch(error){
+        //     console.log('error occured.');
+        // }
+        // setTimeout(() => {
+        //     console.log('Username and password fatched............... Please wait.....');
+        // }, 5000);
+        // setTimeout(() => {
+        //     console.log('username is Shahid Khan .');
+        // }, 6000);
+        // setTimeout(() => {
+        //     console.log('And his faceboo ids password is shahid12333333333333333.');
+        // }, 7000);
+
+
+
+
+        // ******************* ERROR OBJECT *********************//
+
+
+        // try {
+        //     let a = prompt('What is your age')
+        //     a = Number.parseInt(a)
+        //     if(a > 100){
+        //         throw new ReferenceError('This age is not eligible')
+        //     }
+        // }catch(error){
+        //     console.log(error.name);
+        //     console.log(error.message);
+        //     console.log(error.stack);
+        // }
+
+        // console.log('this script still running');
+
+
+
+
+
+
+
+        // ***************** FINALLY CLAUSE ******************//
+        fun = () => {
+
+            try {
+                // console.log(hi);
+                console.log('Programe runs successfully.');
+                return
+            } catch (drror) {
+                console.log('An error occured.');
+                console.log(hehehe);
+            } finally {
+                console.log('This is final Clause');
+                // close fiel 
+                // end the loop
+                // ____________ used for clean up 
+            }
+        }
+fun()
+console.log("End");
+
+
+    </script>
+</body>
+
+</html>

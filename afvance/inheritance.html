@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overridding</title>
+    <style>
+        body {
+            background-color: #313131;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Overridding in Javascript</h1>
+
+
+    <!-- *********** Script ************* -->
+
+    <script>
+        class employe {
+            constructor(name){
+                console.log('Hey here is constructor in employe class');
+                console.log('The programmer is ' + name);
+            }
+            login() {
+                console.log(`Employe has loggedin.`);
+            }
+
+            logout (){
+                console.log(`Employe has loggedOut.`);
+            }
+
+            leaves (leave){
+                console.log(`Employe has requested ${leave} leaves. auto granted`);
+            }
+        }
+
+        class programmer extends employe {
+            coffie (co){
+                console.log(`Programmer requested ${co} coffies.`);
+            }
+            leaves (leave){
+                super.leaves(2)
+                console.log('One extra leave');
+                // console.log(`Employe has requested ${leave + 1} leaves. (One extra)`);
+            }
+        }
+
+        let first = new programmer('Babar Khan ')
+        first.login()
+        first.login()
+        first.coffie(13)
+        first.leaves(4)
+
+    </script>
+</body>
+
+</html>

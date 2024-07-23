@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: linear-gradient(50deg, rgb(38, 38, 38), rgb(24, 24, 24)  );
+            color: white;
+        }
+        .container {
+            height: 100vh;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container .clock-wrap {
+            background-color: black;
+            padding: 2rem;
+            border-radius: 5px;
+            display: flex;
+            border: 3px solid yellow;
+        }
+        .container .clock-wrap .box {
+            border: 1px solid red;
+            margin: 3px;
+            border-radius: 100px;
+            font-size: 3rem;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="clock-wrap">
+            <div class="clock box"></div>
+            <div class="mins box"></div>
+            <div class="sec box"></div>
+            <div class="am"></div>
+        </div>
+    </div>
+</body>
+<script>
+    let clockBox = document.querySelector('.clock')
+    let minsBox = document.querySelector('.mins')
+    let secBox = document.querySelector('.sec')
+    let am = document.querySelector('.am')
+
+    let updateClock = ()=>{
+        let date = new Date()
+        let hours = date.getHours()
+        let mins = date.getMinutes()
+        let sec = date.getSeconds()
+
+        clockBox.innerHTML = hours
+        minsBox.innerHTML = mins
+        secBox.innerHTML = sec
+        if(hours >= 12){
+            am.innerHTML = "PM"
+        }else {
+            am.innerHTML = "AM"
+        }
+    }
+
+    setInterval(() => {
+        updateClock()
+    }, 0);
+
+    let 
+</script>
+</html>

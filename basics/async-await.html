@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+    <style>
+        body {
+            background-color: #313131;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Async & Await</h1>
+    </div>
+
+    <script>
+
+        // *************** ASYNC means if return PROMISE **************** //
+
+        async function loadS (){
+            let karachiWeather = new Promise((resolve, reject)=>{
+                setTimeout(() => {
+                    resolve('30 Deg')
+                }, 4000);
+            })
+
+            let lahoreWeather = new Promise((resolve, reject)=>{
+                setTimeout(() => {
+                    resolve('44 Deg')
+                }, 7000);
+            })
+
+            // karachiWeather.then(alert)
+            // lahoreWeather.then(alert)
+            console.log("Karachi's weather fetching Please wait.");
+            let KW = await karachiWeather
+            console.log("Karachi's is fatched."+ KW);
+            console.log("Lahore's weather fetching Please wait.");
+            let LW = await lahoreWeather
+            console.log("Lahore's is fatched."+ LW);
+            return [KW, LW]
+        }
+
+        
+        let a = loadS()
+        a.then((value)=>{
+            console.log(value);
+        })
+        // console.log(a);
+
+    </script>
+</body>
+
+</html>

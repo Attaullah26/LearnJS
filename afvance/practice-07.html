@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Set 07</title>
+    <style>
+        body {
+            background-color: #323232;
+            color: white;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            display: flex;
+            background-color: black;
+            padding: 10px;
+            width: 100%;
+        }
+
+        li {
+            list-style: none;
+            padding: 0 15px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1250px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Gallery</li>
+        <li>Contact Us</li>
+        <li>FAQs</li>
+    </ul>
+    <div class="container">
+        <h3>Hello , Welcome to our site</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ipsam nemo saepe asperiores sint velit? Veniam
+            possimus nihil maxime minus consectetur sunt ratione saepe ullam. Lorem, ipsum dolor sit amet consectetur
+            adipisicing elit. Officiis ipsa, at porro sit deserunt in provident ullam doloremque qui iusto, aliquam iure
+            velit sint sapiente culpa ratione eum officia ad? Sunt consectetur, ex cum qui deleniti rem totam id
+            dignissimos a exercitationem nisi soluta praesentium omnis velit doloribus! Nulla ducimus temporibus
+            repellat impedit culpa nemo laudantium amet sequi ipsum facilis debitis corporis deleniti non architecto
+            odit provident, labore aspernatur molestias qu</p>
+    </div>
+    <table>
+        <td>Hello</td>
+        <td>Hello 2</td>
+        <td>Hello 3</td>
+    </table>
+</body>
+<script>
+    document.getElementsByTagName('ul')[0].firstElementChild.style.color = 'red'
+    document.getElementsByTagName('ul')[0].firstElementChild.style.color = 'green'
+    document.getElementsByTagName('ul')[0].lastElementChild.style.color = 'green'
+
+    let li = document.getElementsByTagName('li')
+    let newLi = Array.from(li)
+
+    newLi.forEach((li)=>{
+        li.style.backgroundColor = 'cyan'
+    })
+
+</script>
+
+</html>

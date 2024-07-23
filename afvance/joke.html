@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tell Me a Joke</title>
+    <style>
+        body {
+            background-color: #323232;
+            color: white;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            /* background-color: red; */
+            margin: 2rem;
+            text-align: center;
+        }
+
+        .joke {
+            padding: 1rem;
+            border: 2px solid white;
+            width: 100%;
+            /* max-width: 450px; */
+            margin: 1rem auto;
+            height: 50vh;
+            font-size: 2.5rem;
+            text-align: center;
+            font-style: italic;
+            font-weight: 700;
+            text-shadow: 2px 2px 5px black;
+            font-family: monospace;
+            background-color: black;
+        }
+        .try {
+            background-color: blue;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Want to Listen a Joke?</h1>
+        <p class="joke">
+            Is Garmi Me Subha Ka Nikla Hua Agar Shaam Ko Ghar Aaye To Usay "Bhoola" Nahi Balke "Bhuna Hua" Kehty Hen..!
+        </p>
+        <button class="try">Another Joke</button>
+    </div>
+</body>
+<script>
+    let jokes = [
+        'Is Garmi Me Subha Ka Nikla Hua Agar Shaam Ko Ghar Aaye To Usay "Bhoola" Nahi Balke "Bhuna Hua" Kehty Hen..!',
+
+        'What s the similarity between Income Tax and a Caller Tune? . .. ... In both the cases, one pays the money and others enjoy.',
+
+        'Saying Funny jokes boost up the people immunity process as body relaxes after every good moment of your life.',
+
+        'Married men live longer than single men do, but, married men are a lot more willing to die.',
+
+        'A man in Hell asked Devil: Can I make a call to my Wife? After making call he asked How much pay... Devil: Nothing, hell to hell is free... :-)',
+
+        'Laughing is the best the medicine. But, if you are laughing without a reason, you need medicine',
+
+        'A man in Hell asked Devil: Can I make a call to my Wife? After making call he asked How much pay... Devil: Nothing, hell to hell is free...',
+
+        'Agr Koi Apky DiL py Dastak Dy To Foran Darwaza Nai Kholna chahye, ku Ky Kuch Logon Ki Aadat Bachon Jesi Hoti Hai, Dastak Dy Ky Bhag Jate Hain. ',
+
+        'Duniya K Ziyada-tar Currency Notes Per Aadmi Ki Tasveer Hoti Hai, Magar,, In Per Qabza Aurton Ka Hi Hota Hai.. ',
+
+        'Admi: Mohabt Shadi Se Pehle Honi Chahye Ya shadi ke Bad Me? . Boy: Mohabt Shadi Se Pehle Ho Ya Shadi k Bad Bus Uski Khbar Bv Ko Nhi Honi Chye',
+
+        'Aaina Kehta Hai, Kehna To Nahi Chahiye Tha.. Tu Abhi Tak Zinda Hai?? Rehna To Nahi Chahiye Tha.. :-D',
+
+        'Mujhse Woh Kehti Hai k Tumhari Zindagi ko Jannat Bana dungi . . . . . . . . . . Banana Usko Maggie bhi nahi aata … . . Per Confidence Dekho Bandi ka ;-):-D',
+
+        'Dost: Yar Doctor ye Q Pochty Hain K Subah kya Khaya Raat kya Khaya.? . 2nd Dost: Yaar is Se Mareez ki Maali Halat ka Pata lag Jata Hain.',
+
+        '1 admi ne FM radio pe call ki Admi: Mujay 1 batwa mila hai jis me boht sary paisy, credit cards aur NIC card hai. Address lakki marwat ka hai. Host: To ap unhein batwa wapis dena chahty hn? Admi:Hum ap ko pagal lagte hy, Usay meri taraf se 1 sad Song suna den.',
+
+        'Jin: Kiy hukam hai mere aaka? Student: Mere taraf se perhye tum ker lo Jin: Aaka.. Hukum karo bakwas nai :D ;) :D',
+
+        'Banta: Tume itna kisne mara? Santa: Mere padosi ka bacha gum gya! Banta: To tumne aisa kya keh diya? ... ? ? ? ? ? ? ? ? ? ? ? Santa: Maine kaha Google pe Search karle !',
+
+        'Rab kare aap ko sab miley Himmat Izzat Rupaiya Bungalow Style Smile Personality Popularity Car Pyar . . . . . . . . . . . . . . . . . . . . . . . . . . Ab bhi button daba rahe ho LAALCHI.',
+
+        'If it seems easy, You are doing it wrong.',
+
+        'Banta: Tume itna kisne mara? Santa: Mere padosi ka bacha gum gya! Banta: To tumne aisa kya keh diya? ... ? ? ? ? ? ? ? ? ? ? ? Santa: Maine kaha Google pe Search karle !',
+
+        'Laughing is the best the medicine. But, if you are laughing without a reason, you need medicine',
+
+        'A man in Hell asked Devil: Can I make a call to my Wife? After making call he asked How much pay... Devil: Nothing, hell to hell is free... :-)',
+
+        'A woman worries about the future until she gets a husband. A man never worries about the future until he gets a wife. A successful man is one who makes more money than his wife can spend. A successful woman is one who can find such a man.',
+
+        'Married men live longer than single men do, but, married men are a lot more willing to die.',
+
+        'Teacher: “Can anyone give me an example of Coincidence?” Johnny: “Sir, my mother and father got married on the same day same time.”',
+
+        'A man in Hell asked Devil: Can I make a call to my Wife? After making call he asked How much pay... Devil: Nothing, hell to hell is free... :-)',
+
+        'Next generation LKG poem chatting chatting yes papa girlfriend setting no papa telling lies no papa open your whatsapp hahaha,',
+
+        'Two Tigers were resting under a tree.. Suddenly a RABBIT passed very fast. Tiger could not make out & asked, “What was that?” 2nd Tiger smiled and said: . . . . Fast Food…my dear friend'
+    ]
+
+    let randomNumber = Math.floor(Math.random() * jokes.length )
+    // console.log(randomNumber);
+
+    let displayJoke = ()=> {
+        
+    }
+    let another = document.querySelector('.try')
+    let joke_box = document.querySelector('.joke')
+        joke_box.innerHTML = jokes[randomNumber]
+        another.addEventListener('click', ()=>{
+            window.location.reload()
+        })
+</script>
+
+</html>

@@ -123,13 +123,13 @@ consumePromiseFive()
 // fetchAllUsers()
 
 
-fetch('https://randomuser.me/api')
-.then(function(response){
-    return response.json()
-})
-.then(function(data){
-    console.log(data);
-})
-.catch(function(error){
-    console.log(error);
-})
+// fetch('https://randomuser.me/api')
+// .then(function(response){
+//     return response.json()
+// })
+// .then(function(data){
+//     console.log(data);
+// })
+// .catch(function(error){
+//     console.log(error);
+// })

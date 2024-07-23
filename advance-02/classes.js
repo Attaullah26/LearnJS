@@ -22,8 +22,6 @@
 // console.log(myUser.encryptPassword());
 
 
-
-
 // Behind the scene 
 
 const user = function (username, email, password){
@@ -38,3 +36,6 @@ user.prototype.encryptPassword = function(){
 
 const test = new user('Khan', 'khan@gmail.com', 420)
 console.log(test.encryptPassword());
+
+
+

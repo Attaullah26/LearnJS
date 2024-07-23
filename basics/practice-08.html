@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 08</title>
+    <style>
+        body {
+            background-color: #313131;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        button {
+            padding: 5px 10px;
+        }
+
+        .bulb {
+
+            background-color: yellow;
+        }
+
+        .bulb-wrap {
+            border: 2px solid white;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 1rem auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Practice Set 08</h1>
+        <button onclick="alert('First button clicked.')">first</button>
+
+        <h2>Bookmarks</h2>
+        <button id="google">Google</button>
+        <button id="fb">Facebook</button>
+        <button id="youtube">YouTube</button>
+
+        <div class="bulb bulb-wrap" id="bulb">
+        </div>
+    </div>
+
+    <script>
+        // Question.No.01
+        // Solved in html onclick 
+
+
+        // Question.No.02
+        let google = document.getElementById('google')
+        let fb = document.getElementById('fb')
+        let youtube = document.getElementById('youtube')
+
+        google.addEventListener('click', () => {
+            window.location = "https://www.google.com"
+        })
+        fb.addEventListener('click', () => {
+            window.location = "https://www.facebook.com"
+        })
+        youtube.addEventListener('click', () => {
+            window.location = "https://www.youtube.com"
+        })
+
+
+
+        // const fetchContent = async (url)=>{
+        //     con = await fetch(url)
+        //     let a = await con.json()
+        //     return a
+        // }
+
+        setInterval( () => {
+            document.querySelector('#bulb').classList.toggle('bulb')
+        }, 200)
+
+
+
+    </script>
+</body>
+
+</html>

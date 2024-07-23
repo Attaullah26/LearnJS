@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class & Object</title>
+    <style>
+        body {
+            background-color: #313131;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Class & Object in Javascript</h1>
+
+
+    <!-- *********** Script ************* -->
+    <script>
+
+        class railwaysForm{
+            constructor(name, train, address){
+                this.name = name
+                this.trainNo = train
+                this.address = address
+            }
+            preview(){
+                alert( this.name + 'Your form is submited. Your train number is ' + this.trainNo + ' and your address is ' + this.address)
+            }
+            submit(){
+                console.log(this.name + 'Your form is submited.')
+            }
+            cancel(){
+                console.log(this.name + 'Your form is canceled.')
+                this.trainNo = 0
+            }
+        
+        }
+
+        const babar = new railwaysForm('Babar Khan ', '0110', 'Steel Town, Bin qasim Malir Karachi')
+        
+        babar.preview()
+        babar.submit()
+    </script>
+</body>
+
+</html>

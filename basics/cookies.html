@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+    <style>
+        body {
+            background-color: #313131;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Cookies in Javascript</h1>
+    </div>
+    <script>
+        // does not touch other cookies , nor it replace it just adds new values 
+
+        document.cookie = "name=babar2526"
+        // let key = prompt('enter your key')
+        // let value = prompt('enter value')
+        // document.cookie = `${encodeURIComponent(key)}=${encodeURIComponent(value)}`
+        decodeURIComponent('uehuehd%3B=%3D1')
+        console.log(document.cookie);
+
+
+
+
+        // ******************* LOCAL STORAGE *************** //
+
+        let key = prompt('Enter key to set')
+        let value = prompt('Enter value to set')
+
+        localStorage.setItem(key, value)
+        let onlyKey = localStorage.getItem(key)
+
+        console.log(`The key at ${key} is ${onlyKey}`);
+
+        if(key == 'red' || key == 'blue'){
+            localStorage.removeItem(key)
+        }
+        localStorage.removeItem(null)
+        
+
+        if(key == 0 || value == 0){
+            localStorage.clear()
+        }
+    </script>
+</body>
+
+</html>

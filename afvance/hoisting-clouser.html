@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting & Clouser</title>
+    <style>
+        body {
+            background-color: #313131;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Clouser & Hoisting in Javascript</h1>
+
+
+    <!-- *********** Script ************* -->
+
+    <script>
+  
+        // **************** Hoisting *******************
+        
+        let x;
+        x = 11
+        // console.log(x);
+
+
+
+
+
+        // Arrow function
+        const hello = (name, greet) => console.log(`Hello Mr. ${name} ${greet}`);
+
+        // hello('Babar Khan', 'Good moring')
+
+
+        let employe = {
+            name: 'Babar',
+            city: 'Karachi',
+            expericence: 25,
+            show:  ()=>{
+                console.log(`Hello your name is ${this.name}`);
+            }
+        }
+
+        console.log(employe.name);
+        employe.show()
+
+    </script>
+</body>
+
+</html>

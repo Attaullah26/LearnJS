@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackerman</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(to right, rgb(4, 24, 4), rgb(0, 71, 0));
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: rgb(29, 255, 4);
+            min-height: 98vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        body img {
+            width: 400px;
+            height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 12px 0;
+            color: rgb(250, 15, 15);
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hacking-img"><img src="/hacking-gif-main.gif" alt=""></div>
+    <div class="container">
+        <div class="bg-layer"></div>
+        <h1>Hackerman</h1>
+        <div class="hack-wrap">
+            
+        </div>
+    </div>
+    <div class="hacking-img"><img src="/hacking-gif-main.gif" alt=""></div>
+
+
+
+    <!-- **************8 Javascript ************** -->
+
+    <script>
+        let messages = [
+            'Initializing Hack tool.....',
+            'Connecting to Facebook.....',
+            'Connecting to Server 1.....',
+            'Conection failed. Retrying........',
+            'Connecting to Server 2.....',
+            'Connected successfully.....',
+            'Username BabarWrites',
+            'Trying Brute Force....',
+            '200k Password tried...',
+            'Match not found!',
+            'Another 200k Password tried...',
+            'Match found!',
+            'Accessing Personal Account.....',
+            'Hack successfu!'
+        ]
+
+        let sleep = async (sec)=>{
+            return new Promise((resolve, reject)=>{
+                setTimeout(() => {
+                    resolve(true)
+                }, sec * 1000);
+            })
+        }
+
+        const showHack = async (msg)=>{
+            await sleep(2)
+            let wrap = document.querySelector('.hack-wrap')
+             wrap.innerHTML = wrap.innerHTML + msg + "<br>"
+            // console.log(msg);
+        }
+
+       ( async ()=>{
+            for (let i = 0; i < messages.length; i++) {
+                await showHack(messages[i])
+                
+            }
+        })()
+
+
+    </script>
+</body>
+
+</html>
